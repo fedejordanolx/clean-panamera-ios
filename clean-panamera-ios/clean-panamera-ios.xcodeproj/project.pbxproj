@@ -1,0 +1,821 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		358946B075B076B060EDBE50 /* Pods_clean_panamera_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF3ED9ED2285B3CC2ED6562 /* Pods_clean_panamera_iosTests.framework */; };
+		6D066E021EC25514006D1778 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E011EC25514006D1778 /* AppDelegate.swift */; };
+		6D066E091EC25514006D1778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D066E081EC25514006D1778 /* Assets.xcassets */; };
+		6D066E0C1EC25514006D1778 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D066E0A1EC25514006D1778 /* LaunchScreen.storyboard */; };
+		6D066E171EC25514006D1778 /* clean_panamera_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E161EC25514006D1778 /* clean_panamera_iosTests.swift */; };
+		6D066E221EC25514006D1778 /* clean_panamera_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E211EC25514006D1778 /* clean_panamera_iosUITests.swift */; };
+		6D066E331EC255EF006D1778 /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E321EC255EF006D1778 /* AdViewController.swift */; };
+		6D066E371EC25635006D1778 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E361EC25635006D1778 /* ProfileViewController.swift */; };
+		6D066E391EC2563D006D1778 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E381EC2563D006D1778 /* HomeViewController.swift */; };
+		6D066E3C1EC25679006D1778 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D066E3B1EC25679006D1778 /* HomeViewController.xib */; };
+		6D066E3E1EC256FC006D1778 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E3D1EC256FC006D1778 /* HomeRouter.swift */; };
+		6D066E411EC25786006D1778 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E401EC25786006D1778 /* Router.swift */; };
+		6D066E431EC2589D006D1778 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E421EC2589D006D1778 /* ViewControllersFactory.swift */; };
+		6D066E451EC258EA006D1778 /* HomeViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E441EC258EA006D1778 /* HomeViewControllersFactory.swift */; };
+		6D0A91D21EC3428E00B7D18B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91D11EC3428E00B7D18B /* NetworkManager.swift */; };
+		6D0A91D41EC3452A00B7D18B /* AdRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91D31EC3452A00B7D18B /* AdRouter.swift */; };
+		6D0A91D61EC3456D00B7D18B /* AdViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91D51EC3456D00B7D18B /* AdViewControllersFactory.swift */; };
+		6D0A91D81EC3472A00B7D18B /* HomeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91D71EC3472A00B7D18B /* HomeNetworkManager.swift */; };
+		6D0A91DA1EC34FE200B7D18B /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91D91EC34FE200B7D18B /* Ad.swift */; };
+		6D0A91DD1EC3509C00B7D18B /* HomeAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91DB1EC3509C00B7D18B /* HomeAdCell.swift */; };
+		6D0A91DE1EC3509C00B7D18B /* HomeAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D0A91DC1EC3509C00B7D18B /* HomeAdCell.xib */; };
+		6D0A91E01EC35BD700B7D18B /* AdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D0A91DF1EC35BD700B7D18B /* AdViewController.xib */; };
+		6D0A91E21EC35CBB00B7D18B /* AdNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91E11EC35CBB00B7D18B /* AdNetworkManager.swift */; };
+		6D0A91E41EC3613A00B7D18B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91E31EC3613A00B7D18B /* Profile.swift */; };
+		993D478CDCA3FF3909B3B34C /* Pods_clean_panamera_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3615FE412D257865C262436 /* Pods_clean_panamera_ios.framework */; };
+		DAA87A8B241F8910724C919B /* Pods_clean_panamera_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2021EAF12272DE5ABCC433B9 /* Pods_clean_panamera_iosUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D066E131EC25514006D1778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D066DF61EC25514006D1778 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D066DFD1EC25514006D1778;
+			remoteInfo = "clean-panamera-ios";
+		};
+		6D066E1E1EC25514006D1778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D066DF61EC25514006D1778 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D066DFD1EC25514006D1778;
+			remoteInfo = "clean-panamera-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02CC844DDEE531139846CFEE /* Pods-clean-panamera-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-panamera-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-clean-panamera-iosUITests/Pods-clean-panamera-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0EF3ED9ED2285B3CC2ED6562 /* Pods_clean_panamera_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clean_panamera_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1264143F97D781929C2B1C66 /* Pods-clean-panamera-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-panamera-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-clean-panamera-iosTests/Pods-clean-panamera-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2021EAF12272DE5ABCC433B9 /* Pods_clean_panamera_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clean_panamera_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		468763BF1F736B7E4E808B3F /* Pods-clean-panamera-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-panamera-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-clean-panamera-iosUITests/Pods-clean-panamera-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D066DFE1EC25514006D1778 /* clean-panamera-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clean-panamera-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D066E011EC25514006D1778 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6D066E081EC25514006D1778 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D066E0B1EC25514006D1778 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6D066E0D1EC25514006D1778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D066E121EC25514006D1778 /* clean-panamera-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clean-panamera-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D066E161EC25514006D1778 /* clean_panamera_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clean_panamera_iosTests.swift; sourceTree = "<group>"; };
+		6D066E181EC25514006D1778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D066E1D1EC25514006D1778 /* clean-panamera-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clean-panamera-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D066E211EC25514006D1778 /* clean_panamera_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clean_panamera_iosUITests.swift; sourceTree = "<group>"; };
+		6D066E231EC25514006D1778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D066E321EC255EF006D1778 /* AdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdViewController.swift; path = Ad/AdViewController.swift; sourceTree = "<group>"; };
+		6D066E361EC25635006D1778 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Profile/ProfileViewController.swift; sourceTree = "<group>"; };
+		6D066E381EC2563D006D1778 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Home/HomeViewController.swift; sourceTree = "<group>"; };
+		6D066E3B1EC25679006D1778 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Home/HomeViewController.xib; sourceTree = "<group>"; };
+		6D066E3D1EC256FC006D1778 /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeRouter.swift; path = Home/HomeRouter.swift; sourceTree = "<group>"; };
+		6D066E401EC25786006D1778 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Core/Router.swift; sourceTree = "<group>"; };
+		6D066E421EC2589D006D1778 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllersFactory.swift; path = Core/ViewControllersFactory.swift; sourceTree = "<group>"; };
+		6D066E441EC258EA006D1778 /* HomeViewControllersFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewControllersFactory.swift; path = Home/HomeViewControllersFactory.swift; sourceTree = "<group>"; };
+		6D0A91D11EC3428E00B7D18B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Core/NetworkManager.swift; sourceTree = "<group>"; };
+		6D0A91D31EC3452A00B7D18B /* AdRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdRouter.swift; path = Ad/AdRouter.swift; sourceTree = "<group>"; };
+		6D0A91D51EC3456D00B7D18B /* AdViewControllersFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdViewControllersFactory.swift; path = Ad/AdViewControllersFactory.swift; sourceTree = "<group>"; };
+		6D0A91D71EC3472A00B7D18B /* HomeNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeNetworkManager.swift; path = Home/HomeNetworkManager.swift; sourceTree = "<group>"; };
+		6D0A91D91EC34FE200B7D18B /* Ad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ad.swift; path = Ad/Ad.swift; sourceTree = "<group>"; };
+		6D0A91DB1EC3509C00B7D18B /* HomeAdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeAdCell.swift; path = Home/HomeAdCell.swift; sourceTree = "<group>"; };
+		6D0A91DC1EC3509C00B7D18B /* HomeAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeAdCell.xib; path = Home/HomeAdCell.xib; sourceTree = "<group>"; };
+		6D0A91DF1EC35BD700B7D18B /* AdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AdViewController.xib; path = Ad/AdViewController.xib; sourceTree = "<group>"; };
+		6D0A91E11EC35CBB00B7D18B /* AdNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdNetworkManager.swift; path = Ad/AdNetworkManager.swift; sourceTree = "<group>"; };
+		6D0A91E31EC3613A00B7D18B /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = Profile/Profile.swift; sourceTree = "<group>"; };
+		9F5EA931206986A58BC15F76 /* Pods-clean-panamera-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-panamera-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-clean-panamera-ios/Pods-clean-panamera-ios.release.xcconfig"; sourceTree = "<group>"; };
+		B677535B94D7D0517ED7C1D5 /* Pods-clean-panamera-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-panamera-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-clean-panamera-iosTests/Pods-clean-panamera-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		CA9ADD4ABA58A4EFA0AD634B /* Pods-clean-panamera-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-panamera-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-clean-panamera-ios/Pods-clean-panamera-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		E3615FE412D257865C262436 /* Pods_clean_panamera_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clean_panamera_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D066DFB1EC25514006D1778 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				993D478CDCA3FF3909B3B34C /* Pods_clean_panamera_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D066E0F1EC25514006D1778 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				358946B075B076B060EDBE50 /* Pods_clean_panamera_iosTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D066E1A1EC25514006D1778 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA87A8B241F8910724C919B /* Pods_clean_panamera_iosUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D066DF51EC25514006D1778 = {
+			isa = PBXGroup;
+			children = (
+				6D066E001EC25514006D1778 /* clean-panamera-ios */,
+				6D066E151EC25514006D1778 /* clean-panamera-iosTests */,
+				6D066E201EC25514006D1778 /* clean-panamera-iosUITests */,
+				6D066DFF1EC25514006D1778 /* Products */,
+				D3234697FE9ED147D1940372 /* Pods */,
+				9AA48B85FF4A02E7991B3DE1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6D066DFF1EC25514006D1778 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D066DFE1EC25514006D1778 /* clean-panamera-ios.app */,
+				6D066E121EC25514006D1778 /* clean-panamera-iosTests.xctest */,
+				6D066E1D1EC25514006D1778 /* clean-panamera-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D066E001EC25514006D1778 /* clean-panamera-ios */ = {
+			isa = PBXGroup;
+			children = (
+				6D066E3A1EC25653006D1778 /* Core */,
+				6D066E311EC2552E006D1778 /* Profile */,
+				6D066E301EC25529006D1778 /* Ad */,
+				6D066E2F1EC25525006D1778 /* Home */,
+				6D066E011EC25514006D1778 /* AppDelegate.swift */,
+				6D066E081EC25514006D1778 /* Assets.xcassets */,
+				6D066E0A1EC25514006D1778 /* LaunchScreen.storyboard */,
+				6D066E0D1EC25514006D1778 /* Info.plist */,
+			);
+			path = "clean-panamera-ios";
+			sourceTree = "<group>";
+		};
+		6D066E151EC25514006D1778 /* clean-panamera-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				6D066E161EC25514006D1778 /* clean_panamera_iosTests.swift */,
+				6D066E181EC25514006D1778 /* Info.plist */,
+			);
+			path = "clean-panamera-iosTests";
+			sourceTree = "<group>";
+		};
+		6D066E201EC25514006D1778 /* clean-panamera-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6D066E211EC25514006D1778 /* clean_panamera_iosUITests.swift */,
+				6D066E231EC25514006D1778 /* Info.plist */,
+			);
+			path = "clean-panamera-iosUITests";
+			sourceTree = "<group>";
+		};
+		6D066E2F1EC25525006D1778 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6D066E381EC2563D006D1778 /* HomeViewController.swift */,
+				6D0A91D71EC3472A00B7D18B /* HomeNetworkManager.swift */,
+				6D066E441EC258EA006D1778 /* HomeViewControllersFactory.swift */,
+				6D066E3D1EC256FC006D1778 /* HomeRouter.swift */,
+				6D066E3B1EC25679006D1778 /* HomeViewController.xib */,
+				6D0A91DB1EC3509C00B7D18B /* HomeAdCell.swift */,
+				6D0A91DC1EC3509C00B7D18B /* HomeAdCell.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		6D066E301EC25529006D1778 /* Ad */ = {
+			isa = PBXGroup;
+			children = (
+				6D066E321EC255EF006D1778 /* AdViewController.swift */,
+				6D0A91DF1EC35BD700B7D18B /* AdViewController.xib */,
+				6D0A91D31EC3452A00B7D18B /* AdRouter.swift */,
+				6D0A91D51EC3456D00B7D18B /* AdViewControllersFactory.swift */,
+				6D0A91D91EC34FE200B7D18B /* Ad.swift */,
+				6D0A91E11EC35CBB00B7D18B /* AdNetworkManager.swift */,
+			);
+			name = Ad;
+			sourceTree = "<group>";
+		};
+		6D066E311EC2552E006D1778 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6D066E361EC25635006D1778 /* ProfileViewController.swift */,
+				6D0A91E31EC3613A00B7D18B /* Profile.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		6D066E3A1EC25653006D1778 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6D066E401EC25786006D1778 /* Router.swift */,
+				6D066E421EC2589D006D1778 /* ViewControllersFactory.swift */,
+				6D0A91D11EC3428E00B7D18B /* NetworkManager.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		9AA48B85FF4A02E7991B3DE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3615FE412D257865C262436 /* Pods_clean_panamera_ios.framework */,
+				0EF3ED9ED2285B3CC2ED6562 /* Pods_clean_panamera_iosTests.framework */,
+				2021EAF12272DE5ABCC433B9 /* Pods_clean_panamera_iosUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3234697FE9ED147D1940372 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA9ADD4ABA58A4EFA0AD634B /* Pods-clean-panamera-ios.debug.xcconfig */,
+				9F5EA931206986A58BC15F76 /* Pods-clean-panamera-ios.release.xcconfig */,
+				1264143F97D781929C2B1C66 /* Pods-clean-panamera-iosTests.debug.xcconfig */,
+				B677535B94D7D0517ED7C1D5 /* Pods-clean-panamera-iosTests.release.xcconfig */,
+				468763BF1F736B7E4E808B3F /* Pods-clean-panamera-iosUITests.debug.xcconfig */,
+				02CC844DDEE531139846CFEE /* Pods-clean-panamera-iosUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D066DFD1EC25514006D1778 /* clean-panamera-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D066E261EC25514006D1778 /* Build configuration list for PBXNativeTarget "clean-panamera-ios" */;
+			buildPhases = (
+				4644015F2BF0BBAD6DF69BFE /* [CP] Check Pods Manifest.lock */,
+				6D066DFA1EC25514006D1778 /* Sources */,
+				6D066DFB1EC25514006D1778 /* Frameworks */,
+				6D066DFC1EC25514006D1778 /* Resources */,
+				D19181CA3E41B8CD6B30FF14 /* [CP] Embed Pods Frameworks */,
+				FB00906305988FF75D23CA9E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "clean-panamera-ios";
+			productName = "clean-panamera-ios";
+			productReference = 6D066DFE1EC25514006D1778 /* clean-panamera-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6D066E111EC25514006D1778 /* clean-panamera-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D066E291EC25514006D1778 /* Build configuration list for PBXNativeTarget "clean-panamera-iosTests" */;
+			buildPhases = (
+				24ACD4E4022B5DBB197BBCF2 /* [CP] Check Pods Manifest.lock */,
+				6D066E0E1EC25514006D1778 /* Sources */,
+				6D066E0F1EC25514006D1778 /* Frameworks */,
+				6D066E101EC25514006D1778 /* Resources */,
+				0EA394B2CD5F9366FC0CC7BD /* [CP] Embed Pods Frameworks */,
+				D378059510B428B40B4E946C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D066E141EC25514006D1778 /* PBXTargetDependency */,
+			);
+			name = "clean-panamera-iosTests";
+			productName = "clean-panamera-iosTests";
+			productReference = 6D066E121EC25514006D1778 /* clean-panamera-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6D066E1C1EC25514006D1778 /* clean-panamera-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D066E2C1EC25514006D1778 /* Build configuration list for PBXNativeTarget "clean-panamera-iosUITests" */;
+			buildPhases = (
+				0FEB9595B28B3753A8DFB71C /* [CP] Check Pods Manifest.lock */,
+				6D066E191EC25514006D1778 /* Sources */,
+				6D066E1A1EC25514006D1778 /* Frameworks */,
+				6D066E1B1EC25514006D1778 /* Resources */,
+				AC94894ECDDC561165959350 /* [CP] Embed Pods Frameworks */,
+				8D0077B76D425E873CBC0108 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D066E1F1EC25514006D1778 /* PBXTargetDependency */,
+			);
+			name = "clean-panamera-iosUITests";
+			productName = "clean-panamera-iosUITests";
+			productReference = 6D066E1D1EC25514006D1778 /* clean-panamera-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D066DF61EC25514006D1778 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = OLX;
+				TargetAttributes = {
+					6D066DFD1EC25514006D1778 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EK44LBUA25;
+						ProvisioningStyle = Automatic;
+					};
+					6D066E111EC25514006D1778 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EK44LBUA25;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6D066DFD1EC25514006D1778;
+					};
+					6D066E1C1EC25514006D1778 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EK44LBUA25;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6D066DFD1EC25514006D1778;
+					};
+				};
+			};
+			buildConfigurationList = 6D066DF91EC25514006D1778 /* Build configuration list for PBXProject "clean-panamera-ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D066DF51EC25514006D1778;
+			productRefGroup = 6D066DFF1EC25514006D1778 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D066DFD1EC25514006D1778 /* clean-panamera-ios */,
+				6D066E111EC25514006D1778 /* clean-panamera-iosTests */,
+				6D066E1C1EC25514006D1778 /* clean-panamera-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D066DFC1EC25514006D1778 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D066E0C1EC25514006D1778 /* LaunchScreen.storyboard in Resources */,
+				6D0A91DE1EC3509C00B7D18B /* HomeAdCell.xib in Resources */,
+				6D0A91E01EC35BD700B7D18B /* AdViewController.xib in Resources */,
+				6D066E091EC25514006D1778 /* Assets.xcassets in Resources */,
+				6D066E3C1EC25679006D1778 /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D066E101EC25514006D1778 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D066E1B1EC25514006D1778 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EA394B2CD5F9366FC0CC7BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-clean-panamera-iosTests/Pods-clean-panamera-iosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0FEB9595B28B3753A8DFB71C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		24ACD4E4022B5DBB197BBCF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4644015F2BF0BBAD6DF69BFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8D0077B76D425E873CBC0108 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-clean-panamera-iosUITests/Pods-clean-panamera-iosUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC94894ECDDC561165959350 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-clean-panamera-iosUITests/Pods-clean-panamera-iosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D19181CA3E41B8CD6B30FF14 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-clean-panamera-ios/Pods-clean-panamera-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D378059510B428B40B4E946C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-clean-panamera-iosTests/Pods-clean-panamera-iosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB00906305988FF75D23CA9E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-clean-panamera-ios/Pods-clean-panamera-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D066DFA1EC25514006D1778 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D0A91E21EC35CBB00B7D18B /* AdNetworkManager.swift in Sources */,
+				6D0A91D21EC3428E00B7D18B /* NetworkManager.swift in Sources */,
+				6D066E371EC25635006D1778 /* ProfileViewController.swift in Sources */,
+				6D066E331EC255EF006D1778 /* AdViewController.swift in Sources */,
+				6D066E021EC25514006D1778 /* AppDelegate.swift in Sources */,
+				6D066E391EC2563D006D1778 /* HomeViewController.swift in Sources */,
+				6D0A91D81EC3472A00B7D18B /* HomeNetworkManager.swift in Sources */,
+				6D066E451EC258EA006D1778 /* HomeViewControllersFactory.swift in Sources */,
+				6D066E411EC25786006D1778 /* Router.swift in Sources */,
+				6D0A91E41EC3613A00B7D18B /* Profile.swift in Sources */,
+				6D0A91D41EC3452A00B7D18B /* AdRouter.swift in Sources */,
+				6D0A91DD1EC3509C00B7D18B /* HomeAdCell.swift in Sources */,
+				6D0A91D61EC3456D00B7D18B /* AdViewControllersFactory.swift in Sources */,
+				6D066E3E1EC256FC006D1778 /* HomeRouter.swift in Sources */,
+				6D0A91DA1EC34FE200B7D18B /* Ad.swift in Sources */,
+				6D066E431EC2589D006D1778 /* ViewControllersFactory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D066E0E1EC25514006D1778 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D066E171EC25514006D1778 /* clean_panamera_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D066E191EC25514006D1778 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D066E221EC25514006D1778 /* clean_panamera_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D066E141EC25514006D1778 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D066DFD1EC25514006D1778 /* clean-panamera-ios */;
+			targetProxy = 6D066E131EC25514006D1778 /* PBXContainerItemProxy */;
+		};
+		6D066E1F1EC25514006D1778 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D066DFD1EC25514006D1778 /* clean-panamera-ios */;
+			targetProxy = 6D066E1E1EC25514006D1778 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6D066E0A1EC25514006D1778 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D066E0B1EC25514006D1778 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D066E241EC25514006D1778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D066E251EC25514006D1778 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D066E271EC25514006D1778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA9ADD4ABA58A4EFA0AD634B /* Pods-clean-panamera-ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EK44LBUA25;
+				INFOPLIST_FILE = "clean-panamera-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olx.clean-panamera-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6D066E281EC25514006D1778 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F5EA931206986A58BC15F76 /* Pods-clean-panamera-ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EK44LBUA25;
+				INFOPLIST_FILE = "clean-panamera-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olx.clean-panamera-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		6D066E2A1EC25514006D1778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1264143F97D781929C2B1C66 /* Pods-clean-panamera-iosTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = EK44LBUA25;
+				INFOPLIST_FILE = "clean-panamera-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olx.clean-panamera-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/clean-panamera-ios.app/clean-panamera-ios";
+			};
+			name = Debug;
+		};
+		6D066E2B1EC25514006D1778 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B677535B94D7D0517ED7C1D5 /* Pods-clean-panamera-iosTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = EK44LBUA25;
+				INFOPLIST_FILE = "clean-panamera-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olx.clean-panamera-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/clean-panamera-ios.app/clean-panamera-ios";
+			};
+			name = Release;
+		};
+		6D066E2D1EC25514006D1778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 468763BF1F736B7E4E808B3F /* Pods-clean-panamera-iosUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = EK44LBUA25;
+				INFOPLIST_FILE = "clean-panamera-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olx.clean-panamera-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "clean-panamera-ios";
+			};
+			name = Debug;
+		};
+		6D066E2E1EC25514006D1778 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02CC844DDEE531139846CFEE /* Pods-clean-panamera-iosUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = EK44LBUA25;
+				INFOPLIST_FILE = "clean-panamera-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olx.clean-panamera-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "clean-panamera-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D066DF91EC25514006D1778 /* Build configuration list for PBXProject "clean-panamera-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D066E241EC25514006D1778 /* Debug */,
+				6D066E251EC25514006D1778 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D066E261EC25514006D1778 /* Build configuration list for PBXNativeTarget "clean-panamera-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D066E271EC25514006D1778 /* Debug */,
+				6D066E281EC25514006D1778 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D066E291EC25514006D1778 /* Build configuration list for PBXNativeTarget "clean-panamera-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D066E2A1EC25514006D1778 /* Debug */,
+				6D066E2B1EC25514006D1778 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D066E2C1EC25514006D1778 /* Build configuration list for PBXNativeTarget "clean-panamera-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D066E2D1EC25514006D1778 /* Debug */,
+				6D066E2E1EC25514006D1778 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D066DF61EC25514006D1778 /* Project object */;
+}

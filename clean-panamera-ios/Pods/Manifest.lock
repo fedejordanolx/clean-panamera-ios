@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (4.4.0)
+  - AlamofireImage (3.2.0):
+    - Alamofire (~> 4.1)
+  - AlamofireNetworkActivityIndicator (2.1.0):
+    - Alamofire (~> 4.1)
+  - DequeuableRegistrable (0.1.5)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4.0)
+  - AlamofireImage (~> 3.2.0)
+  - AlamofireNetworkActivityIndicator (~> 2.1.0)
+  - DequeuableRegistrable (from `https://github.com/fmo91/DequeuableRegistrable/`)
+
+EXTERNAL SOURCES:
+  DequeuableRegistrable:
+    :git: https://github.com/fmo91/DequeuableRegistrable/
+
+CHECKOUT OPTIONS:
+  DequeuableRegistrable:
+    :commit: e518e802dd99a146077cb65d82d51c29098e5b5b
+    :git: https://github.com/fmo91/DequeuableRegistrable/
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  AlamofireNetworkActivityIndicator: 4716f6554bdfb9c7cf13b1e0e3af21163129690a
+  DequeuableRegistrable: fba8a5d083a5a87398a7c7aa35813ff7237f1fda
+
+PODFILE CHECKSUM: 743f0363ec6d45b45be44786b614654dbe62bae4
+
+COCOAPODS: 1.2.0
