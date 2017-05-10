@@ -13,11 +13,11 @@ class HomeViewController: UIViewController {
 
     @IBOutlet fileprivate weak var adsTableView: UITableView!
     
-    var homeRouter: HomeRouter
-    var homeNetworkManager: HomeNetworkManager
+    var homeRouter: HomeRouteable!
+    var homeNetworkManager: HomeNetwork!
     var ads: [Ad]
     
-    init(withHomeRouter homeRouter: HomeRouter, homeNetworkManager: HomeNetworkManager) {
+    init(withHomeRouter homeRouter: HomeRouteable? = nil, homeNetworkManager: HomeNetwork? = nil) {
         self.homeRouter = homeRouter
         self.homeNetworkManager = homeNetworkManager
         self.ads = [Ad]()

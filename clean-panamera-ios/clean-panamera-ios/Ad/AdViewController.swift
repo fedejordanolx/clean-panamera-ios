@@ -13,15 +13,14 @@ class AdViewController: UIViewController {
     @IBOutlet fileprivate weak var adTitleLabel: UILabel!
     @IBOutlet fileprivate weak var adDescriptionLabel: UILabel!
     @IBOutlet fileprivate weak var adImageView: UIImageView!
-    @IBOutlet fileprivate weak var adProfileImageView: UIImageView!
-    @IBOutlet fileprivate weak var adProfileLabel: UILabel!
+    @IBOutlet fileprivate weak var adProfileContainerView: UIView!
     
-    var adRouter: AdRouter
+    var adRouteable: AdRouteable
     var adNetworkManager: AdNetworkManager
     var ad: Ad
     
-    init(withAdRouter adRouter: AdRouter, adNetworkManager: AdNetworkManager, ad: Ad) {
-        self.adRouter = adRouter
+    init(withAdRouteable adRouteable: AdRouteable, adNetworkManager: AdNetworkManager, ad: Ad) {
+        self.adRouteable = adRouteable
         self.adNetworkManager = adNetworkManager
         self.ad = ad
         super.init(nibName: nil, bundle: nil)
@@ -34,6 +33,7 @@ class AdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupInterface()
         adNetworkManager.getAd(withId: ad.id) { (ad: Ad) in
             self.ad = ad
             self.updateWithAd()
@@ -47,13 +47,12 @@ extension AdViewController {
     
     func setupInterface() {
         updateWithAd()
+        adRouteable.display(adProfile: ad.profile, onView: adProfileContainerView, fromViewController: self)
     }
     
     func updateWithAd() {
         adTitleLabel.text = ad.title
         adDescriptionLabel.text = ad.description
         adImageView.image = ad.image
-        adProfileLabel.text = ad.profile.name
-        adProfileImageView.image = ad.profile.image
     }
 }

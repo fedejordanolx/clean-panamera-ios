@@ -9,14 +9,20 @@
 import Foundation
 
 protocol AdViewControllersFactoreable {
-    func adViewController(withAdRouter adRouter: AdRouter, ad: Ad) -> AdViewController
+    func adViewController(withAdRouteable adRouteable: AdRouteable, ad: Ad) -> AdViewController
+    func adProfileViewController(withAdRouteable adRouteable: AdRouteable, adProfile: Profile) -> AdProfileViewController
 }
 
 class AdViewControllersFactory: AdViewControllersFactoreable {
     
-    func adViewController(withAdRouter adRouter: AdRouter, ad: Ad) -> AdViewController {
-        let adViewController = AdViewController(withAdRouter: adRouter, adNetworkManager: AdNetworkManager(), ad: ad)
+    func adViewController(withAdRouteable adRouteable: AdRouteable, ad: Ad) -> AdViewController {
+        let adViewController = AdViewController(withAdRouteable: adRouteable, adNetworkManager: AdNetworkManager(), ad: ad)
         adViewController.title = "Ad detail"
         return adViewController
+    }
+    
+    func adProfileViewController(withAdRouteable adRouteable: AdRouteable, adProfile: Profile) -> AdProfileViewController {
+        let adProfileViewController = AdProfileViewController(withAdRouteable: adRouteable, adProfile: adProfile)
+        return adProfileViewController
     }
 }

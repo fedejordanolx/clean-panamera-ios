@@ -10,7 +10,6 @@ import UIKit
 
 protocol HomeRouteable {
     var viewControllersFactory: HomeViewControllersFactoreable { get }
-    var adRouter: AdRouteable { get }
     
     // MARK:- Inputs
     func didTap(onAd ad: Ad, fromViewController viewController: UIViewController)
@@ -22,14 +21,13 @@ protocol HomeRouteable {
 class HomeRouter: HomeRouteable {
     
     var viewControllersFactory: HomeViewControllersFactoreable
-    var adRouter: AdRouteable
     
-    init(withHomeViewControllersFactory homeViewControllersFactory: HomeViewControllersFactory = HomeViewControllersFactory(), adRouter: AdRouter = AdRouter()) {
+    init(withHomeViewControllersFactory homeViewControllersFactory: HomeViewControllersFactory = HomeViewControllersFactory()) {
         self.viewControllersFactory = homeViewControllersFactory
-        self.adRouter = adRouter
     }
     
     func didTap(onAd ad: Ad, fromViewController viewController: UIViewController) {
+        let adRouter = AdRouter()
         adRouter.show(ad: ad, fromViewController: viewController)
     }
     

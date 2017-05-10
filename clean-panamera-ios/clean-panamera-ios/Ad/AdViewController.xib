@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,8 +14,7 @@
             <connections>
                 <outlet property="adDescriptionLabel" destination="5bS-qE-qnq" id="XOV-nq-AQX"/>
                 <outlet property="adImageView" destination="AXM-xT-8sD" id="Spk-Tv-Oer"/>
-                <outlet property="adProfileImageView" destination="fTI-TL-6IT" id="xRD-lp-SMi"/>
-                <outlet property="adProfileLabel" destination="XWN-fM-vbt" id="7w4-mO-bM6"/>
+                <outlet property="adProfileContainerView" destination="T4N-gQ-5Rp" id="gEx-fF-WnS"/>
                 <outlet property="adTitleLabel" destination="V1l-RW-ezn" id="8SJ-xj-uaj"/>
                 <outlet property="view" destination="iN0-l3-epB" id="wxL-SW-uQC"/>
             </connections>
@@ -42,52 +40,41 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bS-qE-qnq">
-                    <rect key="frame" x="16" y="488" width="343" height="159"/>
+                    <rect key="frame" x="16" y="496" width="343" height="151"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwG-dx-0br">
-                    <rect key="frame" x="16" y="395" width="343" height="88"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fTI-TL-6IT">
-                    <rect key="frame" x="16" y="395" width="85" height="85"/>
+                <view contentMode="scaleToFill" verticalHuggingPriority="1000" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="85" translatesAutoresizingMaskIntoConstraints="NO" id="T4N-gQ-5Rp">
+                    <rect key="frame" x="16" y="403" width="343" height="85"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="fTI-TL-6IT" secondAttribute="height" multiplier="1:1" id="eTq-iq-es0"/>
+                        <constraint firstAttribute="height" constant="85" id="yIM-rj-vQD"/>
                     </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWN-fM-vbt">
-                    <rect key="frame" x="109" y="428.5" width="250" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="5bS-qE-qnq" secondAttribute="trailing" constant="16" id="149-oI-1er"/>
-                <constraint firstItem="pwG-dx-0br" firstAttribute="top" secondItem="fTI-TL-6IT" secondAttribute="top" id="1IQ-Vh-SeD"/>
+                <constraint firstItem="5bS-qE-qnq" firstAttribute="top" secondItem="T4N-gQ-5Rp" secondAttribute="bottom" constant="8" id="1dQ-Z3-Ssw"/>
                 <constraint firstAttribute="bottom" secondItem="5bS-qE-qnq" secondAttribute="bottom" constant="20" id="DZx-oT-o6r"/>
                 <constraint firstItem="AXM-xT-8sD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="EUd-2L-Sje"/>
-                <constraint firstItem="XWN-fM-vbt" firstAttribute="centerY" secondItem="pwG-dx-0br" secondAttribute="centerY" id="HRD-rf-Lra"/>
                 <constraint firstItem="V1l-RW-ezn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="OFo-i4-MME"/>
-                <constraint firstItem="fTI-TL-6IT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="PKK-17-cS3"/>
-                <constraint firstItem="fTI-TL-6IT" firstAttribute="height" secondItem="AXM-xT-8sD" secondAttribute="height" multiplier="0.25" id="QmO-i0-561"/>
-                <constraint firstItem="pwG-dx-0br" firstAttribute="top" secondItem="AXM-xT-8sD" secondAttribute="bottom" id="SV1-V6-nMW"/>
-                <constraint firstItem="pwG-dx-0br" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="V0f-CR-7T5"/>
+                <constraint firstItem="T4N-gQ-5Rp" firstAttribute="top" secondItem="AXM-xT-8sD" secondAttribute="bottom" constant="8" id="WWD-pZ-26s"/>
                 <constraint firstAttribute="trailing" secondItem="AXM-xT-8sD" secondAttribute="trailing" constant="16" id="WeD-YV-u7e"/>
-                <constraint firstItem="XWN-fM-vbt" firstAttribute="leading" secondItem="fTI-TL-6IT" secondAttribute="trailing" constant="8" id="Zez-T3-keg"/>
-                <constraint firstAttribute="trailing" secondItem="pwG-dx-0br" secondAttribute="trailing" constant="16" id="a2e-fA-hpc"/>
-                <constraint firstItem="5bS-qE-qnq" firstAttribute="top" secondItem="pwG-dx-0br" secondAttribute="bottom" constant="5" id="bMN-vh-m6W"/>
                 <constraint firstAttribute="trailing" secondItem="V1l-RW-ezn" secondAttribute="trailing" constant="16" id="c5b-LS-2hj"/>
                 <constraint firstItem="AXM-xT-8sD" firstAttribute="top" secondItem="V1l-RW-ezn" secondAttribute="bottom" constant="8" id="dAb-Z5-dec"/>
                 <constraint firstItem="V1l-RW-ezn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="gP4-hg-yth"/>
-                <constraint firstItem="XWN-fM-vbt" firstAttribute="trailing" secondItem="pwG-dx-0br" secondAttribute="trailing" id="ged-Ge-FMe"/>
-                <constraint firstItem="5bS-qE-qnq" firstAttribute="top" secondItem="fTI-TL-6IT" secondAttribute="bottom" constant="8" id="vCb-FY-P4K"/>
+                <constraint firstItem="T4N-gQ-5Rp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="u1N-kd-7Rt"/>
                 <constraint firstItem="5bS-qE-qnq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="wMU-Xe-5ri"/>
+                <constraint firstAttribute="trailing" secondItem="T4N-gQ-5Rp" secondAttribute="trailing" constant="16" id="zhH-GD-rTp"/>
             </constraints>
             <point key="canvasLocation" x="55.5" y="54.5"/>
         </view>
+        <tapGestureRecognizer id="KnO-hl-ejy">
+            <connections>
+                <action selector="didSelectProfileWithSender:" destination="-1" id="RH2-Mj-NR6"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>
