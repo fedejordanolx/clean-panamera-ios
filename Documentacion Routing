@@ -1,0 +1,44 @@
+Con el objeto de hacer el proyecto menos propenso a fallas y de mayor calidad, necesitamos implementar una arquitectura que sea totalmente testeable.
+
+Y, para hacer un proyecto totalmente testeable, necesitamos abstraer estados globales (Singletons, llamadas estaticas) de todas las clases, en la medida que sea posible. Es por ello que necesitamos aplicar Inyeccion de dependencias (DI)
+Un objeto primordial en el core de toda app en iOS son los UIViewControllers. Ellos son los encargados, generalmente, de realizar toda la logica necesaria para poder mostrar una interfaz operativa al usuario, y responder mediante eventos a sus acciones.
+
+Es por eso, que si queremos hacer un sistema testeable, necesitamos aplicar principalmente inyeccion de dependencias a estos objetos, los UIViewController. Además, de que por lo general en iOS se suele incentivar una arquitectura simple de tipo MVC, tendiendo los proyectos a ser mas del tipo Massive View Controller a Model View Controller.
+
+Para poder aplicar DI a estos objetos, necesitamos conocer sus dependencias al momento de su instanciacion. Es por eso, que aplicar este patron al proyecto, tambien implica implementar un metodo de Navegacion o Ruteo eficiente. 
+Esto nos lleva a utilizar Routing, como patron de instanciacion y navegacion en la aplicacion.
+
+Mediante la aplicacion de Routing (Objetos de tipo Router), podremos encontrar un lugar en comun donde se instancien los UIViewControllers, y de esta forma, inyectar correctamente las dependencias, para asi poder lograr una arquitectura base que pueda ser testeable más facilmente
+
+Los proximos pasos a seguir, entonces, serian los siguientes:
+
+1. Migrar Storyboards a XIBs. Los storyboards son muy utiles para ver el flujo de una app, pero son sobreutilizados cuando hay muchos flujos y llamados entre vistas. Además, un UIViewController no deberia ser capaz de saber a donde o como va a ser la proxima vista que tenga que presentarse al usuario.
+
+2. Refactorizar NavigationHelper y StoryboardHelper a objetos de tipo Router por flujo. De esta forma, cambiamos los llamados estaticos tipo NavigationHelper.openProductView(), donde en realidad el llamado estatico a openProductView es como si fuera una copia del codigo en el UIViewController, a llamadas tipo homeRouter.didSelectProduct(), donde el UIViewController solo indica a su dependencia de tipo router que accion tomo el usuario, y no se entera de que vista tiene que presentar ni como tiene que estar conformada. Estos objetos de tipo Router se encargarian de la instanciacion (tambien para UIViewControllers de tipo embed) y la navegacion de UIViewController en toda la app, cada uno respondiendo a un flujo especifico. 
+Se identificaron los siguientes objetos de tipo Router a utilizar:
+- RootRouter
+- HomeRouter
+- SearchRouter
+- ProductRouter
+- ProfileRouter
+- ChatRouter
+- OldChatRouter (necesario para mantener consistencia en toda la app y eliminar NavigationHelper y StoryboardHelper)
+- LoginRouter
+- SimplePostingRouter
+- GalleryRouter
+- OnboardingRouter
+- CategoriesRouter
+- MakeAnOfferRouter
+- FiltersRouter
+- EditProfileRouter
+- HelpRouter
+- FieldsSelectionRouter
+- NotificationCenterRouter
+- PushNotificationsRouter
+
+Son en total 19 routers a implementar
+
+3. Una vez ya implementado Routing en el proyecto, se realizaran los cambios correspondientes para que todos los UIViewControllers sean injectables en todas sus dependencias. Esto implica un cambio grande en el proyecto ya que se tocaria toda la arquitectura actual.
+No se refactorizaria el uso de singletons, simplemente se cambiaria el input de sus UIViewControllers para que sean inyectables. Clases estaticas de utilidades deberian minimo cambiar su comportamiento para que sean inyectables
+
+4. Como ultimo paso, se crearan unit tests para probar la correcta navegacion de la app. Además, al ser ya una arquitectura inyectable, se podrán realizar unit test para probar comportamientos de negocio y presentacion
