@@ -11,7 +11,7 @@ import DequeuableRegistrable
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet fileprivate weak var adsTableView: UITableView!
+    @IBOutlet weak var adsTableView: UITableView!
     
     var homeRouter: HomeRouteable!
     var homeNetworkManager: HomeNetwork!

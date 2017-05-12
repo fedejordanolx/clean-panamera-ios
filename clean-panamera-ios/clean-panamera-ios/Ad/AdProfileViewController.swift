@@ -11,7 +11,7 @@ import UIKit
 class AdProfileViewController: UIViewController {
     
     @IBOutlet fileprivate weak var adProfileImageView: UIImageView!
-    @IBOutlet fileprivate weak var adProfileLabel: UILabel!
+    @IBOutlet weak var adProfileLabel: UILabel!
     
     var adProfile: Profile
     var adRouteable: AdRouteable

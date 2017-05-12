@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    @IBOutlet fileprivate weak var profileLabel: UILabel!
+    @IBOutlet weak var profileLabel: UILabel!
     @IBOutlet fileprivate weak var profileImageView: UIImageView!
     @IBOutlet fileprivate weak var profileAdsContainerView: UIView!
     

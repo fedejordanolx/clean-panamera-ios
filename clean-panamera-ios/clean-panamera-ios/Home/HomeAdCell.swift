@@ -12,9 +12,9 @@ import DequeuableRegistrable
 
 class HomeAdCell: UITableViewCell, Registrable, Dequeuable {
     
-    @IBOutlet fileprivate weak var titleLabel: UILabel!
-    @IBOutlet fileprivate weak var descriptionLabel: UILabel!
-    @IBOutlet fileprivate weak var adImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var adImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

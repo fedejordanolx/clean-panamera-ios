@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileAdsViewController: UIViewController {
 
-    @IBOutlet fileprivate weak var profileAdsTableView: UITableView!
+    @IBOutlet weak var profileAdsTableView: UITableView!
     
     var profileRouteable: ProfileRouteable
     var profileNetwork: ProfileNetwork

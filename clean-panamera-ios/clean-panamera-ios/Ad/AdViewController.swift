@@ -10,8 +10,8 @@ import UIKit
 
 class AdViewController: UIViewController {
     
-    @IBOutlet fileprivate weak var adTitleLabel: UILabel!
-    @IBOutlet fileprivate weak var adDescriptionLabel: UILabel!
+    @IBOutlet weak var adTitleLabel: UILabel!
+    @IBOutlet weak var adDescriptionLabel: UILabel!
     @IBOutlet fileprivate weak var adImageView: UIImageView!
     @IBOutlet fileprivate weak var adProfileContainerView: UIView!
     

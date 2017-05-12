@@ -10,8 +10,8 @@ import UIKit
 
 struct Ad {
     let id = 0
-    let title = "White shirt"
-    let description = "A good shirt. You can use it at work or in your birthday. Please, buy it. 50% discount with cash"
+    var title = "White shirt"
+    var description = "A good shirt. You can use it at work or in your birthday. Please, buy it. 50% discount with cash"
     let image = UIImage(named: "adImage")!
     let profile = Profile()
 }

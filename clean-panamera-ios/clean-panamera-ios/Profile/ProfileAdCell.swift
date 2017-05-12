@@ -12,7 +12,7 @@ import DequeuableRegistrable
 class ProfileAdCell: UITableViewCell, Registrable, Dequeuable {
     
     @IBOutlet fileprivate weak var profileAdImageView: UIImageView!
-    @IBOutlet fileprivate weak var profileAdLabel: UILabel!
+    @IBOutlet weak var profileAdLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
