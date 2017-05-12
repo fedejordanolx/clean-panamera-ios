@@ -40,8 +40,26 @@ class AdRouter: AdRouteable {
     }
     
     func show(ad: Ad, fromViewController viewController: UIViewController) {
-        let adViewController = viewControllersFactory.adViewController(withAdRouteable: self, ad: ad)
-        viewController.show(adViewController, sender: nil)
+        if let previousAdViewController = previouslyLoadedView(withAd: ad, fromViewController: viewController) {
+            _ = viewController.navigationController?.popToViewController(previousAdViewController, animated: true)
+        } else {
+            let adViewController = viewControllersFactory.adViewController(withAdRouteable: self, ad: ad)
+            viewController.show(adViewController, sender: nil)
+        }
     }
 
+}
+
+// MARK:- Utils
+extension AdRouter {
+    
+    fileprivate func previouslyLoadedView(withAd ad: Ad, fromViewController viewController: UIViewController) -> AdViewController? {
+        guard let navigationController = viewController.navigationController else { return nil }
+        for previousViewController in navigationController.viewControllers {
+            if let adViewController = previousViewController as? AdViewController, adViewController.ad.id == ad.id {
+                return adViewController
+            }
+        }
+        return nil
+    }
 }

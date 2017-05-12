@@ -42,8 +42,26 @@ class ProfileRouter: ProfileRouteable {
 
     
     func show(profile: Profile, fromViewController viewController: UIViewController) {
-        let profileViewController = viewControllersFactory.profileViewController(withProfileRouteable: self, profile: profile)
-        viewController.show(profileViewController, sender: nil)
+        if let previousProfileViewController = previouslyLoadedView(withProfile: profile, fromViewController: viewController) {
+            _ = viewController.navigationController?.popToViewController(previousProfileViewController, animated: true)
+        } else {
+            let profileViewController = viewControllersFactory.profileViewController(withProfileRouteable: self, profile: profile)
+            viewController.show(profileViewController, sender: nil)
+        }
     }
     
+}
+
+// MARK:- Utils
+extension ProfileRouter {
+    
+    fileprivate func previouslyLoadedView(withProfile profile: Profile, fromViewController viewController: UIViewController) -> ProfileViewController? {
+        guard let navigationController = viewController.navigationController else { return nil }
+        for previousViewController in navigationController.viewControllers {
+            if let profileViewController = previousViewController as? ProfileViewController, profileViewController.profile.id == profile.id {
+                return profileViewController
+            }
+        }
+        return nil
+    }
 }
