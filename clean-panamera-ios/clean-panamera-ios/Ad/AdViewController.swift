@@ -56,3 +56,12 @@ extension AdViewController {
         adImageView.image = ad.image
     }
 }
+
+// MARK:- Actions
+extension AdViewController {
+    
+    @IBAction private func didTapOnImage() {
+        guard let image = adImageView.image else { return }
+        adRouteable.didTap(onAdImage: image, fromViewController: self)
+    }
+}

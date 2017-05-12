@@ -18,12 +18,8 @@
 		6D066E391EC2563D006D1778 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E381EC2563D006D1778 /* HomeViewController.swift */; };
 		6D066E3C1EC25679006D1778 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D066E3B1EC25679006D1778 /* HomeViewController.xib */; };
 		6D066E3E1EC256FC006D1778 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E3D1EC256FC006D1778 /* HomeRouter.swift */; };
-		6D066E411EC25786006D1778 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E401EC25786006D1778 /* Router.swift */; };
-		6D066E431EC2589D006D1778 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E421EC2589D006D1778 /* ViewControllersFactory.swift */; };
-		6D066E451EC258EA006D1778 /* HomeViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E441EC258EA006D1778 /* HomeViewControllersFactory.swift */; };
 		6D0A91D21EC3428E00B7D18B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91D11EC3428E00B7D18B /* NetworkManager.swift */; };
 		6D0A91D41EC3452A00B7D18B /* AdRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91D31EC3452A00B7D18B /* AdRouter.swift */; };
-		6D0A91D61EC3456D00B7D18B /* AdViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91D51EC3456D00B7D18B /* AdViewControllersFactory.swift */; };
 		6D0A91D81EC3472A00B7D18B /* HomeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91D71EC3472A00B7D18B /* HomeNetworkManager.swift */; };
 		6D0A91DA1EC34FE200B7D18B /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91D91EC34FE200B7D18B /* Ad.swift */; };
 		6D0A91DD1EC3509C00B7D18B /* HomeAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91DB1EC3509C00B7D18B /* HomeAdCell.swift */; };
@@ -33,7 +29,6 @@
 		6D0A91E41EC3613A00B7D18B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91E31EC3613A00B7D18B /* Profile.swift */; };
 		6D0A91E61EC3651800B7D18B /* ProfileNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91E51EC3651800B7D18B /* ProfileNetworkManager.swift */; };
 		6D0A91E81EC366E700B7D18B /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91E71EC366E700B7D18B /* ProfileRouter.swift */; };
-		6D0A91EA1EC3672C00B7D18B /* ProfileViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91E91EC3672C00B7D18B /* ProfileViewControllersFactory.swift */; };
 		6D0A91EC1EC3687800B7D18B /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D0A91EB1EC3687800B7D18B /* ProfileViewController.xib */; };
 		6D0A91EE1EC36B5700B7D18B /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91ED1EC36B5700B7D18B /* HomeTests.swift */; };
 		6D0A91F11EC3A52200B7D18B /* AdProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91EF1EC3A52200B7D18B /* AdProfileViewController.swift */; };
@@ -43,6 +38,9 @@
 		6DE41D531EC601350064C985 /* ProfileAdsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE41D511EC601350064C985 /* ProfileAdsViewController.xib */; };
 		6DE41D561EC6030F0064C985 /* ProfileAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE41D541EC6030F0064C985 /* ProfileAdCell.swift */; };
 		6DE41D571EC6030F0064C985 /* ProfileAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE41D551EC6030F0064C985 /* ProfileAdCell.xib */; };
+		6DE41D5C1EC62CF20064C985 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE41D5A1EC62CF20064C985 /* GalleryViewController.swift */; };
+		6DE41D5D1EC62CF20064C985 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE41D5B1EC62CF20064C985 /* GalleryViewController.xib */; };
+		6DE41D5F1EC62D020064C985 /* GalleryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE41D5E1EC62D020064C985 /* GalleryRouter.swift */; };
 		993D478CDCA3FF3909B3B34C /* Pods_clean_panamera_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3615FE412D257865C262436 /* Pods_clean_panamera_ios.framework */; };
 		DAA87A8B241F8910724C919B /* Pods_clean_panamera_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2021EAF12272DE5ABCC433B9 /* Pods_clean_panamera_iosUITests.framework */; };
 /* End PBXBuildFile section */
@@ -86,12 +84,8 @@
 		6D066E381EC2563D006D1778 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Home/HomeViewController.swift; sourceTree = "<group>"; };
 		6D066E3B1EC25679006D1778 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Home/HomeViewController.xib; sourceTree = "<group>"; };
 		6D066E3D1EC256FC006D1778 /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeRouter.swift; path = Home/HomeRouter.swift; sourceTree = "<group>"; };
-		6D066E401EC25786006D1778 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Core/Router.swift; sourceTree = "<group>"; };
-		6D066E421EC2589D006D1778 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllersFactory.swift; path = Core/ViewControllersFactory.swift; sourceTree = "<group>"; };
-		6D066E441EC258EA006D1778 /* HomeViewControllersFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewControllersFactory.swift; path = Home/HomeViewControllersFactory.swift; sourceTree = "<group>"; };
 		6D0A91D11EC3428E00B7D18B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Core/NetworkManager.swift; sourceTree = "<group>"; };
 		6D0A91D31EC3452A00B7D18B /* AdRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdRouter.swift; path = Ad/AdRouter.swift; sourceTree = "<group>"; };
-		6D0A91D51EC3456D00B7D18B /* AdViewControllersFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdViewControllersFactory.swift; path = Ad/AdViewControllersFactory.swift; sourceTree = "<group>"; };
 		6D0A91D71EC3472A00B7D18B /* HomeNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeNetworkManager.swift; path = Home/HomeNetworkManager.swift; sourceTree = "<group>"; };
 		6D0A91D91EC34FE200B7D18B /* Ad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ad.swift; path = Ad/Ad.swift; sourceTree = "<group>"; };
 		6D0A91DB1EC3509C00B7D18B /* HomeAdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeAdCell.swift; path = Home/HomeAdCell.swift; sourceTree = "<group>"; };
@@ -101,7 +95,6 @@
 		6D0A91E31EC3613A00B7D18B /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = Profile/Profile.swift; sourceTree = "<group>"; };
 		6D0A91E51EC3651800B7D18B /* ProfileNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileNetworkManager.swift; path = Profile/ProfileNetworkManager.swift; sourceTree = "<group>"; };
 		6D0A91E71EC366E700B7D18B /* ProfileRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileRouter.swift; path = Profile/ProfileRouter.swift; sourceTree = "<group>"; };
-		6D0A91E91EC3672C00B7D18B /* ProfileViewControllersFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewControllersFactory.swift; path = Profile/ProfileViewControllersFactory.swift; sourceTree = "<group>"; };
 		6D0A91EB1EC3687800B7D18B /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewController.xib; path = Profile/ProfileViewController.xib; sourceTree = "<group>"; };
 		6D0A91ED1EC36B5700B7D18B /* HomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
 		6D0A91EF1EC3A52200B7D18B /* AdProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdProfileViewController.swift; path = Ad/AdProfileViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +104,9 @@
 		6DE41D511EC601350064C985 /* ProfileAdsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileAdsViewController.xib; path = Profile/ProfileAdsViewController.xib; sourceTree = "<group>"; };
 		6DE41D541EC6030F0064C985 /* ProfileAdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileAdCell.swift; path = Profile/ProfileAdCell.swift; sourceTree = "<group>"; };
 		6DE41D551EC6030F0064C985 /* ProfileAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileAdCell.xib; path = Profile/ProfileAdCell.xib; sourceTree = "<group>"; };
+		6DE41D5A1EC62CF20064C985 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryViewController.swift; path = Gallery/GalleryViewController.swift; sourceTree = "<group>"; };
+		6DE41D5B1EC62CF20064C985 /* GalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GalleryViewController.xib; path = Gallery/GalleryViewController.xib; sourceTree = "<group>"; };
+		6DE41D5E1EC62D020064C985 /* GalleryRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryRouter.swift; path = Gallery/GalleryRouter.swift; sourceTree = "<group>"; };
 		9F5EA931206986A58BC15F76 /* Pods-clean-panamera-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-panamera-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-clean-panamera-ios/Pods-clean-panamera-ios.release.xcconfig"; sourceTree = "<group>"; };
 		B677535B94D7D0517ED7C1D5 /* Pods-clean-panamera-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-panamera-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-clean-panamera-iosTests/Pods-clean-panamera-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA9ADD4ABA58A4EFA0AD634B /* Pods-clean-panamera-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-panamera-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-clean-panamera-ios/Pods-clean-panamera-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +166,7 @@
 		6D066E001EC25514006D1778 /* clean-panamera-ios */ = {
 			isa = PBXGroup;
 			children = (
+				6DE41D591EC62CC60064C985 /* Gallery */,
 				6DE41D581EC603150064C985 /* Model */,
 				6D0A91F31EC3A77100B7D18B /* Extensions */,
 				6D066E3A1EC25653006D1778 /* Core */,
@@ -208,7 +205,6 @@
 			children = (
 				6D066E381EC2563D006D1778 /* HomeViewController.swift */,
 				6D0A91D71EC3472A00B7D18B /* HomeNetworkManager.swift */,
-				6D066E441EC258EA006D1778 /* HomeViewControllersFactory.swift */,
 				6D066E3D1EC256FC006D1778 /* HomeRouter.swift */,
 				6D066E3B1EC25679006D1778 /* HomeViewController.xib */,
 				6D0A91DB1EC3509C00B7D18B /* HomeAdCell.swift */,
@@ -225,7 +221,6 @@
 				6D066E321EC255EF006D1778 /* AdViewController.swift */,
 				6D0A91DF1EC35BD700B7D18B /* AdViewController.xib */,
 				6D0A91D31EC3452A00B7D18B /* AdRouter.swift */,
-				6D0A91D51EC3456D00B7D18B /* AdViewControllersFactory.swift */,
 				6D0A91E11EC35CBB00B7D18B /* AdNetworkManager.swift */,
 			);
 			name = Ad;
@@ -240,7 +235,6 @@
 				6DE41D511EC601350064C985 /* ProfileAdsViewController.xib */,
 				6D0A91E51EC3651800B7D18B /* ProfileNetworkManager.swift */,
 				6D0A91E71EC366E700B7D18B /* ProfileRouter.swift */,
-				6D0A91E91EC3672C00B7D18B /* ProfileViewControllersFactory.swift */,
 				6DE41D541EC6030F0064C985 /* ProfileAdCell.swift */,
 				6DE41D551EC6030F0064C985 /* ProfileAdCell.xib */,
 			);
@@ -250,8 +244,6 @@
 		6D066E3A1EC25653006D1778 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				6D066E401EC25786006D1778 /* Router.swift */,
-				6D066E421EC2589D006D1778 /* ViewControllersFactory.swift */,
 				6D0A91D11EC3428E00B7D18B /* NetworkManager.swift */,
 				6D0A91F41EC3A7AA00B7D18B /* UIViewController+childController.swift */,
 			);
@@ -272,6 +264,16 @@
 				6D0A91E31EC3613A00B7D18B /* Profile.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		6DE41D591EC62CC60064C985 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				6DE41D5A1EC62CF20064C985 /* GalleryViewController.swift */,
+				6DE41D5B1EC62CF20064C985 /* GalleryViewController.xib */,
+				6DE41D5E1EC62D020064C985 /* GalleryRouter.swift */,
+			);
+			name = Gallery;
 			sourceTree = "<group>";
 		};
 		9AA48B85FF4A02E7991B3DE1 /* Frameworks */ = {
@@ -421,6 +423,7 @@
 				6D0A91DE1EC3509C00B7D18B /* HomeAdCell.xib in Resources */,
 				6DE41D571EC6030F0064C985 /* ProfileAdCell.xib in Resources */,
 				6D0A91F21EC3A52200B7D18B /* AdProfileViewController.xib in Resources */,
+				6DE41D5D1EC62CF20064C985 /* GalleryViewController.xib in Resources */,
 				6D0A91E01EC35BD700B7D18B /* AdViewController.xib in Resources */,
 				6DE41D531EC601350064C985 /* ProfileAdsViewController.xib in Resources */,
 				6D066E091EC25514006D1778 /* Assets.xcassets in Resources */,
@@ -589,26 +592,23 @@
 			files = (
 				6D0A91E21EC35CBB00B7D18B /* AdNetworkManager.swift in Sources */,
 				6D0A91F11EC3A52200B7D18B /* AdProfileViewController.swift in Sources */,
-				6D0A91EA1EC3672C00B7D18B /* ProfileViewControllersFactory.swift in Sources */,
 				6D0A91D21EC3428E00B7D18B /* NetworkManager.swift in Sources */,
 				6D066E371EC25635006D1778 /* ProfileViewController.swift in Sources */,
 				6D066E331EC255EF006D1778 /* AdViewController.swift in Sources */,
 				6D066E021EC25514006D1778 /* AppDelegate.swift in Sources */,
 				6D066E391EC2563D006D1778 /* HomeViewController.swift in Sources */,
 				6D0A91D81EC3472A00B7D18B /* HomeNetworkManager.swift in Sources */,
-				6D066E451EC258EA006D1778 /* HomeViewControllersFactory.swift in Sources */,
-				6D066E411EC25786006D1778 /* Router.swift in Sources */,
 				6D0A91E41EC3613A00B7D18B /* Profile.swift in Sources */,
 				6D0A91D41EC3452A00B7D18B /* AdRouter.swift in Sources */,
 				6D0A91DD1EC3509C00B7D18B /* HomeAdCell.swift in Sources */,
 				6D0A91E81EC366E700B7D18B /* ProfileRouter.swift in Sources */,
 				6DE41D521EC601350064C985 /* ProfileAdsViewController.swift in Sources */,
-				6D0A91D61EC3456D00B7D18B /* AdViewControllersFactory.swift in Sources */,
 				6D0A91F51EC3A7AA00B7D18B /* UIViewController+childController.swift in Sources */,
 				6D066E3E1EC256FC006D1778 /* HomeRouter.swift in Sources */,
 				6D0A91E61EC3651800B7D18B /* ProfileNetworkManager.swift in Sources */,
 				6D0A91DA1EC34FE200B7D18B /* Ad.swift in Sources */,
-				6D066E431EC2589D006D1778 /* ViewControllersFactory.swift in Sources */,
+				6DE41D5C1EC62CF20064C985 /* GalleryViewController.swift in Sources */,
+				6DE41D5F1EC62D020064C985 /* GalleryRouter.swift in Sources */,
 				6DE41D561EC6030F0064C985 /* ProfileAdCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

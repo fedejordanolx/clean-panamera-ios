@@ -8,11 +8,10 @@
 
 import UIKit
 
-protocol AdRouteable {
-    var viewControllersFactory: AdViewControllersFactoreable { get }
-    
+protocol AdRouteable {    
     // MARK:- Inputs
     func didTap(onProfile profile: Profile, fromViewController viewController: UIViewController)
+    func didTap(onAdImage adImage: UIImage, fromViewController viewController: UIViewController)
     
     // MARK:- Embeds
     func display(adProfile: Profile, onView containerView: UIView, fromViewController viewController: UIViewController)
@@ -23,19 +22,18 @@ protocol AdRouteable {
 
 class AdRouter: AdRouteable {
     
-    var viewControllersFactory: AdViewControllersFactoreable
-    
-    init(withAdViewControllersFactory adViewControllersFactory: AdViewControllersFactory = AdViewControllersFactory()) {
-        self.viewControllersFactory = adViewControllersFactory
-    }
-    
     func didTap(onProfile profile: Profile, fromViewController viewController: UIViewController) {
         let profileRouter = ProfileRouter()
         profileRouter.show(profile: profile, fromViewController: viewController)
     }
     
+    func didTap(onAdImage adImage: UIImage, fromViewController viewController: UIViewController) {
+        let galleryRouter = GalleryRouter()
+        galleryRouter.showFullScreen(withImage: adImage, fromViewController: viewController)
+    }
+    
     func display(adProfile: Profile, onView containerView: UIView, fromViewController viewController: UIViewController) {
-        let adProfileViewController = viewControllersFactory.adProfileViewController(withAdRouteable: self, adProfile: adProfile)
+        let adProfileViewController = AdProfileViewController(withAdRouteable: self, adProfile: adProfile)
         viewController.display(childViewController: adProfileViewController, inContainerView: containerView)
     }
     
@@ -43,7 +41,8 @@ class AdRouter: AdRouteable {
         if let previousAdViewController = previouslyLoadedView(withAd: ad, fromViewController: viewController) {
             _ = viewController.navigationController?.popToViewController(previousAdViewController, animated: true)
         } else {
-            let adViewController = viewControllersFactory.adViewController(withAdRouteable: self, ad: ad)
+            let adViewController = AdViewController(withAdRouteable: self, adNetwork: AdNetworkManager(), ad: ad)
+            adViewController.title = "Ad detail"
             viewController.show(adViewController, sender: nil)
         }
     }

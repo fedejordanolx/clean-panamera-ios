@@ -61,3 +61,12 @@ extension ProfileViewController {
         profileImageView.image = profile.image
     }
 }
+
+// MARK:- Actions
+extension ProfileViewController {
+    
+    @IBAction private func didTapOnImage() {
+        guard let image = profileImageView.image else { return }
+        profileRouteable.didTap(onProfileImage: image, fromViewController: self)
+    }
+}

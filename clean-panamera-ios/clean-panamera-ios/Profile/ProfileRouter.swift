@@ -8,12 +8,11 @@
 
 import UIKit
 
-protocol ProfileRouteable {
-    var viewControllersFactory: ProfileViewControllersFactoreable { get }
-    
+protocol ProfileRouteable {    
     // MARK:- Inputs
     func didSelect(profileAd: Ad, fromViewController viewController: UIViewController)
-    
+    func didTap(onProfileImage profileImage: UIImage, fromViewController viewController: UIViewController)
+
     // MARK:- Embed
     func display(adsFromProfile profile: Profile, onView containerView: UIView, fromViewController viewController: UIViewController)
     
@@ -24,19 +23,18 @@ protocol ProfileRouteable {
 
 class ProfileRouter: ProfileRouteable {
     
-    var viewControllersFactory: ProfileViewControllersFactoreable
-    
-    init(withProfileViewControllersFactory profileViewControllersFactory: ProfileViewControllersFactory = ProfileViewControllersFactory()) {
-        self.viewControllersFactory = profileViewControllersFactory
-    }
-    
     func didSelect(profileAd: Ad, fromViewController viewController: UIViewController) {
         let adRouter = AdRouter()
         adRouter.show(ad: profileAd, fromViewController: viewController)
     }
     
+    func didTap(onProfileImage profileImage: UIImage, fromViewController viewController: UIViewController) {
+        let galleryRouter = GalleryRouter()
+        galleryRouter.showFullScreen(withImage: profileImage, fromViewController: viewController)
+    }
+    
     func display(adsFromProfile profile: Profile, onView containerView: UIView, fromViewController viewController: UIViewController) {
-        let profileAdsViewController = viewControllersFactory.profileAdsViewController(withProfileRouteable: self, profile: profile)
+        let profileAdsViewController = ProfileAdsViewController(withProfileRouteable: self, profileNetwork: ProfileNetworkManager(), profile: profile)
         viewController.display(childViewController: profileAdsViewController, inContainerView: containerView)
     }
 
@@ -45,7 +43,8 @@ class ProfileRouter: ProfileRouteable {
         if let previousProfileViewController = previouslyLoadedView(withProfile: profile, fromViewController: viewController) {
             _ = viewController.navigationController?.popToViewController(previousProfileViewController, animated: true)
         } else {
-            let profileViewController = viewControllersFactory.profileViewController(withProfileRouteable: self, profile: profile)
+            let profileViewController = ProfileViewController(withProfileRouteable: self, profileNetwork: ProfileNetworkManager(), profile: profile)
+            profileViewController.title = "Profile"
             viewController.show(profileViewController, sender: nil)
         }
     }
@@ -65,3 +64,26 @@ extension ProfileRouter {
         return nil
     }
 }
+
+//protocol PreviouslyLoadable {
+//    
+//    func previouslyLoadedView<T, U>(withObject object: T, fromViewController viewController: UIViewController) -> U?
+//    
+//}
+//
+//extension PreviouslyLoadable {
+//    
+//    func previouslyLoadedView<T: Hashable, U: UIViewController>(withObject object: T, fromViewController viewController: UIViewController) -> U? {
+//        guard let navigationController = viewController.navigationController else { return nil }
+//        for previousViewController in navigationController.viewControllers {
+//            if let objectViewController = previousViewController as? U, profileViewController.profile.id == profile.id {
+//                return profileViewController
+//            }
+//        }
+//        return nil
+//    }
+//    }
+//}
+//
+//
+//}

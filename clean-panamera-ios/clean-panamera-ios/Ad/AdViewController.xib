@@ -33,11 +33,15 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AXM-xT-8sD">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AXM-xT-8sD">
                     <rect key="frame" x="16" y="52" width="343" height="343"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="AXM-xT-8sD" secondAttribute="height" multiplier="1:1" id="R0r-9m-p8B"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="KIg-J4-sa5" appends="YES" id="ymW-js-qVy"/>
+                    </connections>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bS-qE-qnq">
                     <rect key="frame" x="16" y="496" width="343" height="151"/>
@@ -71,9 +75,9 @@
             </constraints>
             <point key="canvasLocation" x="55.5" y="54.5"/>
         </view>
-        <tapGestureRecognizer id="KnO-hl-ejy">
+        <tapGestureRecognizer id="KIg-J4-sa5">
             <connections>
-                <action selector="didSelectProfileWithSender:" destination="-1" id="RH2-Mj-NR6"/>
+                <action selector="didTapOnImage" destination="-1" id="Vkm-zI-nea"/>
             </connections>
         </tapGestureRecognizer>
     </objects>

@@ -9,8 +9,6 @@
 import UIKit
 
 protocol HomeRouteable {
-    var viewControllersFactory: HomeViewControllersFactoreable { get }
-    
     // MARK:- Inputs
     func didTap(onAd ad: Ad, fromViewController viewController: UIViewController)
     
@@ -20,12 +18,6 @@ protocol HomeRouteable {
 
 class HomeRouter: HomeRouteable {
     
-    var viewControllersFactory: HomeViewControllersFactoreable
-    
-    init(withHomeViewControllersFactory homeViewControllersFactory: HomeViewControllersFactory = HomeViewControllersFactory()) {
-        self.viewControllersFactory = homeViewControllersFactory
-    }
-    
     func didTap(onAd ad: Ad, fromViewController viewController: UIViewController) {
         let adRouter = AdRouter()
         adRouter.show(ad: ad, fromViewController: viewController)
@@ -33,7 +25,23 @@ class HomeRouter: HomeRouteable {
     
     func setup(window: inout UIWindow?) {
         window = UIWindow()
-        window?.rootViewController = viewControllersFactory.rootViewController(withHomeRouter: self)
+        window?.rootViewController = rootViewController(withHomeRouter: self)
         window?.makeKeyAndVisible()
     }
+    
+    private func rootViewController(withHomeRouter homeRouter: HomeRouter) -> UINavigationController {
+        let homeViewController = self.homeViewController(withHomeRouter: homeRouter)
+        let navigationController = UINavigationController(rootViewController: homeViewController)
+        navigationController.navigationBar.isOpaque = true
+        navigationController.navigationBar.isTranslucent = false
+        return navigationController
+    }
+    
+    private func homeViewController(withHomeRouter homeRouter: HomeRouter) -> HomeViewController {
+        let homeViewController = HomeViewController(withHomeRouter: homeRouter, homeNetworkManager: HomeNetworkManager())
+        homeViewController.title = "Home"
+        return homeViewController
+    }
 }
+
+
