@@ -12,4 +12,5 @@ struct Profile {
     let id = 0
     let name = "Apu Najasamapetilan"
     let image = UIImage(named: "profileImage")!
+    var ads = [Ad]()
 }

@@ -16,12 +16,12 @@ class AdViewController: UIViewController {
     @IBOutlet fileprivate weak var adProfileContainerView: UIView!
     
     var adRouteable: AdRouteable
-    var adNetworkManager: AdNetworkManager
+    var adNetwork: AdNetwork
     var ad: Ad
     
-    init(withAdRouteable adRouteable: AdRouteable, adNetworkManager: AdNetworkManager, ad: Ad) {
+    init(withAdRouteable adRouteable: AdRouteable, adNetwork: AdNetwork, ad: Ad) {
         self.adRouteable = adRouteable
-        self.adNetworkManager = adNetworkManager
+        self.adNetwork = adNetwork
         self.ad = ad
         super.init(nibName: nil, bundle: nil)
     }
@@ -34,7 +34,7 @@ class AdViewController: UIViewController {
         super.viewDidLoad()
         
         setupInterface()
-        adNetworkManager.getAd(withId: ad.id) { (ad: Ad) in
+        adNetwork.getAd(withId: ad.id) { (ad: Ad) in
             self.ad = ad
             self.updateWithAd()
         }

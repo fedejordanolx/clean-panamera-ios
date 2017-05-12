@@ -11,6 +11,12 @@ import UIKit
 protocol ProfileRouteable {
     var viewControllersFactory: ProfileViewControllersFactoreable { get }
     
+    // MARK:- Inputs
+    func didSelect(profileAd: Ad, fromViewController viewController: UIViewController)
+    
+    // MARK:- Embed
+    func display(adsFromProfile profile: Profile, onView containerView: UIView, fromViewController viewController: UIViewController)
+    
     // MARK:- Outputs
     func show(profile: Profile, fromViewController viewController: UIViewController)
 }
@@ -24,8 +30,20 @@ class ProfileRouter: ProfileRouteable {
         self.viewControllersFactory = profileViewControllersFactory
     }
     
+    func didSelect(profileAd: Ad, fromViewController viewController: UIViewController) {
+        let adRouter = AdRouter()
+        adRouter.show(ad: profileAd, fromViewController: viewController)
+    }
+    
+    func display(adsFromProfile profile: Profile, onView containerView: UIView, fromViewController viewController: UIViewController) {
+        let profileAdsViewController = viewControllersFactory.profileAdsViewController(withProfileRouteable: self, profile: profile)
+        viewController.display(childViewController: profileAdsViewController, inContainerView: containerView)
+    }
+
+    
     func show(profile: Profile, fromViewController viewController: UIViewController) {
-        let profileViewController = viewControllersFactory.profileViewController(withProfile: profile)
+        let profileViewController = viewControllersFactory.profileViewController(withProfileRouteable: self, profile: profile)
         viewController.show(profileViewController, sender: nil)
     }
+    
 }

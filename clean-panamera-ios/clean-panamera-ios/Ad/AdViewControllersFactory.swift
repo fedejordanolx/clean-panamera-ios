@@ -16,7 +16,7 @@ protocol AdViewControllersFactoreable {
 class AdViewControllersFactory: AdViewControllersFactoreable {
     
     func adViewController(withAdRouteable adRouteable: AdRouteable, ad: Ad) -> AdViewController {
-        let adViewController = AdViewController(withAdRouteable: adRouteable, adNetworkManager: AdNetworkManager(), ad: ad)
+        let adViewController = AdViewController(withAdRouteable: adRouteable, adNetwork: AdNetworkManager(), ad: ad)
         adViewController.title = "Ad detail"
         return adViewController
     }

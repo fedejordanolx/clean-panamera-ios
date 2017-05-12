@@ -39,6 +39,10 @@
 		6D0A91F11EC3A52200B7D18B /* AdProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91EF1EC3A52200B7D18B /* AdProfileViewController.swift */; };
 		6D0A91F21EC3A52200B7D18B /* AdProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D0A91F01EC3A52200B7D18B /* AdProfileViewController.xib */; };
 		6D0A91F51EC3A7AA00B7D18B /* UIViewController+childController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0A91F41EC3A7AA00B7D18B /* UIViewController+childController.swift */; };
+		6DE41D521EC601350064C985 /* ProfileAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE41D501EC601350064C985 /* ProfileAdsViewController.swift */; };
+		6DE41D531EC601350064C985 /* ProfileAdsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE41D511EC601350064C985 /* ProfileAdsViewController.xib */; };
+		6DE41D561EC6030F0064C985 /* ProfileAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE41D541EC6030F0064C985 /* ProfileAdCell.swift */; };
+		6DE41D571EC6030F0064C985 /* ProfileAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE41D551EC6030F0064C985 /* ProfileAdCell.xib */; };
 		993D478CDCA3FF3909B3B34C /* Pods_clean_panamera_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3615FE412D257865C262436 /* Pods_clean_panamera_ios.framework */; };
 		DAA87A8B241F8910724C919B /* Pods_clean_panamera_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2021EAF12272DE5ABCC433B9 /* Pods_clean_panamera_iosUITests.framework */; };
 /* End PBXBuildFile section */
@@ -103,6 +107,10 @@
 		6D0A91EF1EC3A52200B7D18B /* AdProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdProfileViewController.swift; path = Ad/AdProfileViewController.swift; sourceTree = "<group>"; };
 		6D0A91F01EC3A52200B7D18B /* AdProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AdProfileViewController.xib; path = Ad/AdProfileViewController.xib; sourceTree = "<group>"; };
 		6D0A91F41EC3A7AA00B7D18B /* UIViewController+childController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+childController.swift"; sourceTree = "<group>"; };
+		6DE41D501EC601350064C985 /* ProfileAdsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileAdsViewController.swift; path = Profile/ProfileAdsViewController.swift; sourceTree = "<group>"; };
+		6DE41D511EC601350064C985 /* ProfileAdsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileAdsViewController.xib; path = Profile/ProfileAdsViewController.xib; sourceTree = "<group>"; };
+		6DE41D541EC6030F0064C985 /* ProfileAdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileAdCell.swift; path = Profile/ProfileAdCell.swift; sourceTree = "<group>"; };
+		6DE41D551EC6030F0064C985 /* ProfileAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileAdCell.xib; path = Profile/ProfileAdCell.xib; sourceTree = "<group>"; };
 		9F5EA931206986A58BC15F76 /* Pods-clean-panamera-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-panamera-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-clean-panamera-ios/Pods-clean-panamera-ios.release.xcconfig"; sourceTree = "<group>"; };
 		B677535B94D7D0517ED7C1D5 /* Pods-clean-panamera-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-panamera-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-clean-panamera-iosTests/Pods-clean-panamera-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA9ADD4ABA58A4EFA0AD634B /* Pods-clean-panamera-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clean-panamera-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-clean-panamera-ios/Pods-clean-panamera-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +170,7 @@
 		6D066E001EC25514006D1778 /* clean-panamera-ios */ = {
 			isa = PBXGroup;
 			children = (
+				6DE41D581EC603150064C985 /* Model */,
 				6D0A91F31EC3A77100B7D18B /* Extensions */,
 				6D066E3A1EC25653006D1778 /* Core */,
 				6D066E311EC2552E006D1778 /* Profile */,
@@ -217,7 +226,6 @@
 				6D0A91DF1EC35BD700B7D18B /* AdViewController.xib */,
 				6D0A91D31EC3452A00B7D18B /* AdRouter.swift */,
 				6D0A91D51EC3456D00B7D18B /* AdViewControllersFactory.swift */,
-				6D0A91D91EC34FE200B7D18B /* Ad.swift */,
 				6D0A91E11EC35CBB00B7D18B /* AdNetworkManager.swift */,
 			);
 			name = Ad;
@@ -228,10 +236,13 @@
 			children = (
 				6D066E361EC25635006D1778 /* ProfileViewController.swift */,
 				6D0A91EB1EC3687800B7D18B /* ProfileViewController.xib */,
+				6DE41D501EC601350064C985 /* ProfileAdsViewController.swift */,
+				6DE41D511EC601350064C985 /* ProfileAdsViewController.xib */,
 				6D0A91E51EC3651800B7D18B /* ProfileNetworkManager.swift */,
-				6D0A91E31EC3613A00B7D18B /* Profile.swift */,
 				6D0A91E71EC366E700B7D18B /* ProfileRouter.swift */,
 				6D0A91E91EC3672C00B7D18B /* ProfileViewControllersFactory.swift */,
+				6DE41D541EC6030F0064C985 /* ProfileAdCell.swift */,
+				6DE41D551EC6030F0064C985 /* ProfileAdCell.xib */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -252,6 +263,15 @@
 			children = (
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		6DE41D581EC603150064C985 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6D0A91D91EC34FE200B7D18B /* Ad.swift */,
+				6D0A91E31EC3613A00B7D18B /* Profile.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		9AA48B85FF4A02E7991B3DE1 /* Frameworks */ = {
@@ -399,8 +419,10 @@
 				6D0A91EC1EC3687800B7D18B /* ProfileViewController.xib in Resources */,
 				6D066E0C1EC25514006D1778 /* LaunchScreen.storyboard in Resources */,
 				6D0A91DE1EC3509C00B7D18B /* HomeAdCell.xib in Resources */,
+				6DE41D571EC6030F0064C985 /* ProfileAdCell.xib in Resources */,
 				6D0A91F21EC3A52200B7D18B /* AdProfileViewController.xib in Resources */,
 				6D0A91E01EC35BD700B7D18B /* AdViewController.xib in Resources */,
+				6DE41D531EC601350064C985 /* ProfileAdsViewController.xib in Resources */,
 				6D066E091EC25514006D1778 /* Assets.xcassets in Resources */,
 				6D066E3C1EC25679006D1778 /* HomeViewController.xib in Resources */,
 			);
@@ -580,12 +602,14 @@
 				6D0A91D41EC3452A00B7D18B /* AdRouter.swift in Sources */,
 				6D0A91DD1EC3509C00B7D18B /* HomeAdCell.swift in Sources */,
 				6D0A91E81EC366E700B7D18B /* ProfileRouter.swift in Sources */,
+				6DE41D521EC601350064C985 /* ProfileAdsViewController.swift in Sources */,
 				6D0A91D61EC3456D00B7D18B /* AdViewControllersFactory.swift in Sources */,
 				6D0A91F51EC3A7AA00B7D18B /* UIViewController+childController.swift in Sources */,
 				6D066E3E1EC256FC006D1778 /* HomeRouter.swift in Sources */,
 				6D0A91E61EC3651800B7D18B /* ProfileNetworkManager.swift in Sources */,
 				6D0A91DA1EC34FE200B7D18B /* Ad.swift in Sources */,
 				6D066E431EC2589D006D1778 /* ViewControllersFactory.swift in Sources */,
+				6DE41D561EC6030F0064C985 /* ProfileAdCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

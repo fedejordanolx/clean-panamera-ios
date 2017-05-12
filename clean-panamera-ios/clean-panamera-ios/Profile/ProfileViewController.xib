@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="clean_panamera_ios" customModuleProvider="target">
             <connections>
+                <outlet property="profileAdsContainerView" destination="NQC-2r-3tj" id="zmb-Cw-xTP"/>
                 <outlet property="profileImageView" destination="KpF-nC-jlI" id="1EY-CG-4ie"/>
                 <outlet property="profileLabel" destination="Iy9-xE-wJW" id="A8e-3D-64m"/>
                 <outlet property="view" destination="iN0-l3-epB" id="d8c-xZ-bYx"/>
@@ -34,16 +35,25 @@
                         <constraint firstAttribute="width" secondItem="KpF-nC-jlI" secondAttribute="height" multiplier="1:1" id="fCS-vW-ipO"/>
                     </constraints>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQC-2r-3tj">
+                    <rect key="frame" x="16" y="415" width="343" height="232"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="NQC-2r-3tj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="3Ph-D7-Y2H"/>
+                <constraint firstAttribute="bottom" secondItem="NQC-2r-3tj" secondAttribute="bottom" constant="20" id="GSk-l2-EoE"/>
                 <constraint firstAttribute="trailing" secondItem="Iy9-xE-wJW" secondAttribute="trailing" constant="16" id="I1U-fJ-ldg"/>
                 <constraint firstItem="Iy9-xE-wJW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="ZVx-sy-ydZ"/>
                 <constraint firstAttribute="trailing" secondItem="KpF-nC-jlI" secondAttribute="trailing" constant="16" id="cRI-Lj-r0U"/>
+                <constraint firstAttribute="trailing" secondItem="NQC-2r-3tj" secondAttribute="trailing" constant="16" id="pMA-gM-fX7"/>
                 <constraint firstItem="Iy9-xE-wJW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="qUa-ZL-8JX"/>
+                <constraint firstItem="NQC-2r-3tj" firstAttribute="top" secondItem="KpF-nC-jlI" secondAttribute="bottom" constant="8" id="rOH-jR-Txw"/>
                 <constraint firstItem="KpF-nC-jlI" firstAttribute="top" secondItem="Iy9-xE-wJW" secondAttribute="bottom" constant="20" id="rcK-9G-TLN"/>
                 <constraint firstItem="KpF-nC-jlI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="xNA-Xw-hpQ"/>
             </constraints>
+            <point key="canvasLocation" x="55.5" y="93.5"/>
         </view>
     </objects>
 </document>

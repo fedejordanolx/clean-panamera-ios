@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "apu_nahasapeemapetilon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "shirt.jpg",
       "scale" : "2x"
     },
     {

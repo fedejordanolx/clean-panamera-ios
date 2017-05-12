@@ -12,12 +12,15 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet fileprivate weak var profileLabel: UILabel!
     @IBOutlet fileprivate weak var profileImageView: UIImageView!
+    @IBOutlet fileprivate weak var profileAdsContainerView: UIView!
     
-    var profileNetworkManager: ProfileNetworkManager
+    var profileNetwork: ProfileNetwork
+    var profileRouteable: ProfileRouteable
     var profile: Profile
     
-    init(withProfileNetworkManager profileNetworkManager: ProfileNetworkManager, profile: Profile) {
-        self.profileNetworkManager = profileNetworkManager
+    init(withProfileRouteable profileRouteable: ProfileRouteable, profileNetwork: ProfileNetwork, profile: Profile) {
+        self.profileRouteable = profileRouteable
+        self.profileNetwork = profileNetwork
         self.profile = profile
         super.init(nibName: nil, bundle: nil)
     }
@@ -38,7 +41,7 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController {
     
     func loadData() {
-        profileNetworkManager.getProfile(withId: profile.id) { (profile: Profile) in
+        profileNetwork.getProfile(withId: profile.id) { (profile: Profile) in
             self.profile = profile
             self.updateWithProfile()
         }
@@ -50,6 +53,7 @@ extension ProfileViewController {
     
     func setupInterface() {
         updateWithProfile()
+        profileRouteable.display(adsFromProfile: profile, onView: profileAdsContainerView, fromViewController: self)
     }
     
     func updateWithProfile() {
