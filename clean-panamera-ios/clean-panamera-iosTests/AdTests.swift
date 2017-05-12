@@ -11,11 +11,12 @@ import XCTest
 @testable import clean_panamera_ios
 
 class AdTests: XCTestCase {
-
+    
+    let mockedRouter = MockedRouter()
+    let adNetworkManager = AdNetworkManager()
+    
     func testAdViewControllerLabelsSetup() {
         // Given
-        let mockedRouter = MockedRouter()
-        let adNetworkManager = AdNetworkManager()
         var ad = Ad()
         ad.title = "TestTitle"
         ad.description = "TestDescription"
@@ -32,7 +33,6 @@ class AdTests: XCTestCase {
     
     func testAdProfileViewControllerLabelSetup() {
         // Given
-        let mockedRouter = MockedRouter()
         var adProfile = Profile()
         adProfile.name = "TestProfile"
         let adProfileViewController = AdProfileViewController(withAdRouteable: mockedRouter, adProfile: adProfile)

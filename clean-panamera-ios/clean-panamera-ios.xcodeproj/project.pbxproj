@@ -11,7 +11,6 @@
 		6D066E021EC25514006D1778 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E011EC25514006D1778 /* AppDelegate.swift */; };
 		6D066E091EC25514006D1778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D066E081EC25514006D1778 /* Assets.xcassets */; };
 		6D066E0C1EC25514006D1778 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D066E0A1EC25514006D1778 /* LaunchScreen.storyboard */; };
-		6D066E171EC25514006D1778 /* clean_panamera_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E161EC25514006D1778 /* clean_panamera_iosTests.swift */; };
 		6D066E221EC25514006D1778 /* clean_panamera_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E211EC25514006D1778 /* clean_panamera_iosUITests.swift */; };
 		6D066E331EC255EF006D1778 /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E321EC255EF006D1778 /* AdViewController.swift */; };
 		6D066E371EC25635006D1778 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D066E361EC25635006D1778 /* ProfileViewController.swift */; };
@@ -77,7 +76,6 @@
 		6D066E0B1EC25514006D1778 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D066E0D1EC25514006D1778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D066E121EC25514006D1778 /* clean-panamera-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clean-panamera-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D066E161EC25514006D1778 /* clean_panamera_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clean_panamera_iosTests.swift; sourceTree = "<group>"; };
 		6D066E181EC25514006D1778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D066E1D1EC25514006D1778 /* clean-panamera-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "clean-panamera-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D066E211EC25514006D1778 /* clean_panamera_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clean_panamera_iosUITests.swift; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				6DE41D661EC64B140064C985 /* ProfileTests.swift */,
-				6D066E161EC25514006D1778 /* clean_panamera_iosTests.swift */,
 				6D0A91ED1EC36B5700B7D18B /* HomeTests.swift */,
 				6DE41D641EC644600064C985 /* AdTests.swift */,
 				6DE41D601EC63E180064C985 /* MockedRouter.swift */,
@@ -629,7 +626,6 @@
 				6DE41D651EC644600064C985 /* AdTests.swift in Sources */,
 				6DE41D611EC63E180064C985 /* MockedRouter.swift in Sources */,
 				6D0A91EE1EC36B5700B7D18B /* HomeTests.swift in Sources */,
-				6D066E171EC25514006D1778 /* clean_panamera_iosTests.swift in Sources */,
 				6DE41D671EC64B140064C985 /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

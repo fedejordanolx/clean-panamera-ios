@@ -11,10 +11,11 @@ import XCTest
 
 class HomeTests: XCTestCase {
     
+    var mockedRouter = MockedRouter()
+    let homeNetworkManager = HomeNetworkManager()
+    
     func testHomeAdsCount() {
         // Given
-        let mockedRouter = MockedRouter()
-        let homeNetworkManager = HomeNetworkManager()
         let homeViewController = HomeViewController(withHomeRouter: mockedRouter, homeNetworkManager: homeNetworkManager)
         let ads = [Ad(), Ad(), Ad()]
         
@@ -31,8 +32,6 @@ class HomeTests: XCTestCase {
     
     func testHomeAdCellLabelsSetup() {
         // Given
-        let mockedRouter = MockedRouter()
-        let homeNetworkManager = HomeNetworkManager()
         let homeViewController = HomeViewController(withHomeRouter: mockedRouter, homeNetworkManager: homeNetworkManager)
         var ad = Ad()
         ad.title = "TestTitle"

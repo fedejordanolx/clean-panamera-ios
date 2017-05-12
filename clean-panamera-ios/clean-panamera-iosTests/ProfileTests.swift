@@ -11,12 +11,13 @@ import XCTest
 
 class ProfileTests: XCTestCase {
     
+    let mockedRouter = MockedRouter()
+    let profileNetworkManager = ProfileNetworkManager()
+    
     func testProfileViewControllerLabelSetup() {
         // Given
         var profile = Profile()
         profile.name = "TestProfile"
-        let mockedRouter = MockedRouter()
-        let profileNetworkManager = ProfileNetworkManager()
         let profileViewController = ProfileViewController(withProfileRouteable: mockedRouter, profileNetwork: profileNetworkManager, profile: profile)
         
         // When
@@ -29,8 +30,6 @@ class ProfileTests: XCTestCase {
     
     func testProfileAdCellsCount() {
         // Given
-        let mockedRouter = MockedRouter()
-        let profileNetworkManager = ProfileNetworkManager()
         let profile = Profile()
         let profileAdsViewController = ProfileAdsViewController(withProfileRouteable: mockedRouter, profileNetwork: profileNetworkManager, profile: profile)
         profileAdsViewController.profileAds = [Ad(), Ad(), Ad()]
@@ -47,8 +46,6 @@ class ProfileTests: XCTestCase {
     
     func testProfileAdCellLabelSetup() {
         // Given
-        let mockedRouter = MockedRouter()
-        let profileNetworkManager = ProfileNetworkManager()
         let profile = Profile()
         let profileAdsViewController = ProfileAdsViewController(withProfileRouteable: mockedRouter, profileNetwork: profileNetworkManager, profile: profile)
         var ad = Ad()
